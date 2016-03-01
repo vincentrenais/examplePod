@@ -15,8 +15,8 @@
 		90FB41368BB7F041B7BFC6EABF63537D /* Pods-examplePod_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = FDE7A15C32094D401679B57BB9FB2091 /* Pods-examplePod_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		949220A28FB919AD05AE246BC036E370 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E4E89230EF59BC255123B67864ACF77 /* Foundation.framework */; };
 		9940CA5444147EB9C6F4335D8557C3D2 /* Pods-examplePod_Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 509CEB54C27928EC7F6F2196110E29F4 /* Pods-examplePod_Tests-dummy.m */; };
-		AB9F4A0B1159A680F84DCF75B99907D8 /* ReplaceMe.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE730B0D3FBF5E73A53516843E08EBCE /* ReplaceMe.swift */; };
 		B10789CD1C63A10BAE07EF2D5707DD55 /* Pods-examplePod_Tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = E9398458922C0CE5180555235B583E39 /* Pods-examplePod_Tests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		B73BB4181C862F5500CD3CA7 /* NibLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = B73BB4171C862F5500CD3CA7 /* NibLoader.swift */; };
 		D8A38DAEF82CE526A1DA1778B42688D4 /* examplePod-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 4220E98CC5D83825913BA1EDDB507BFB /* examplePod-dummy.m */; };
 /* End PBXBuildFile section */
 
@@ -65,8 +65,8 @@
 		815DE82478F9BBE84342D51FC1EC844A /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8EF7C2C160F2CBCF9513DA9568FDCEEA /* Pods_examplePod_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_examplePod_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A4C4CE44F8C4201991900084FB7DEE2D /* examplePod.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = examplePod.xcconfig; sourceTree = "<group>"; };
+		B73BB4171C862F5500CD3CA7 /* NibLoader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NibLoader.swift; sourceTree = "<group>"; };
 		BA6428E9F66FD5A23C0A2E06ED26CD2F /* Podfile */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		BE730B0D3FBF5E73A53516843E08EBCE /* ReplaceMe.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ReplaceMe.swift; sourceTree = "<group>"; };
 		CA861CA93B090F2DDD2741B2CF67AD56 /* examplePod-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "examplePod-prefix.pch"; sourceTree = "<group>"; };
 		CD82A27CD6B317662EA44E4ED237261A /* examplePod.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = examplePod.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D198E07078D29D0D81D27B239AC4BDF4 /* Pods-examplePod_Tests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-examplePod_Tests-acknowledgements.plist"; sourceTree = "<group>"; };
@@ -201,7 +201,7 @@
 		C65D2B41BFCF9EBF638D3C22BF9FEDAA /* Classes */ = {
 			isa = PBXGroup;
 			children = (
-				BE730B0D3FBF5E73A53516843E08EBCE /* ReplaceMe.swift */,
+				B73BB4171C862F5500CD3CA7 /* NibLoader.swift */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -354,7 +354,7 @@
 		D41D8CD98F00B204E9800998ECF8427E /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 0700;
+				LastSwiftUpdateCheck = 0720;
 				LastUpgradeCheck = 0700;
 			};
 			buildConfigurationList = 2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */;
@@ -408,8 +408,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B73BB4181C862F5500CD3CA7 /* NibLoader.swift in Sources */,
 				D8A38DAEF82CE526A1DA1778B42688D4 /* examplePod-dummy.m in Sources */,
-				AB9F4A0B1159A680F84DCF75B99907D8 /* ReplaceMe.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -521,6 +521,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = A4C4CE44F8C4201991900084FB7DEE2D /* examplePod.xcconfig */;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CURRENT_PROJECT_VERSION = 1;
 				DEFINES_MODULE = YES;
@@ -660,6 +661,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = A4C4CE44F8C4201991900084FB7DEE2D /* examplePod.xcconfig */;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CURRENT_PROJECT_VERSION = 1;
 				DEFINES_MODULE = YES;
