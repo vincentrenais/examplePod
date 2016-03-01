@@ -9,7 +9,7 @@
 Pod::Spec.new do |s|
   s.name             = "examplePod"
   s.version          = "0.1.0"
-  s.summary          = "A short description of examplePod."
+  s.summary          = "This pod is an example implementation of a multi language pod"
 
 # This description is used to generate tags and improve search results.
 #   * Think: What does it do? Why did you write it? What is the focus?
@@ -17,6 +17,7 @@ Pod::Spec.new do |s|
 #   * Write the description between the DESC delimiters below.
 #   * Finally, don't worry about the indent, CocoaPods strips it!  
   s.description      = <<-DESC
+  This pod is an experiment of enabling a pod to have both Objc and Swift classes.
                        DESC
 
   s.homepage         = "https://github.com/<GITHUB_USERNAME>/examplePod"
